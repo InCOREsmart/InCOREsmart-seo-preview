@@ -62,3 +62,5 @@ jobs:
           git add -A
           git commit -m "Preview ${GITHUB_SHA}" || exit 0
           git push origin HEAD:gh-pages
+
+# Rebuild preview after source branch fix
