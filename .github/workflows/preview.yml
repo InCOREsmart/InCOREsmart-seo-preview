@@ -37,9 +37,11 @@ jobs:
 
       - name: Build
         working-directory: source
-        run: npm run build
+        run: npm run build -- --base=/InCOREsmart-seo-preview/
 
       - name: Publish to gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -53,8 +55,8 @@ jobs:
             git checkout --orphan gh-pages
             git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           fi
-          rm -rf /tmp/gh-pages/*
-          cp -R source/dist/. /tmp/gh-pages/
+          find /tmp/gh-pages -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -R "$GITHUB_WORKSPACE/source/dist/." /tmp/gh-pages/
           touch /tmp/gh-pages/.nojekyll
           cd /tmp/gh-pages
           git add -A
