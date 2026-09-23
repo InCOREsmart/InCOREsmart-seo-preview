@@ -27,3 +27,5 @@ Preview source: SEO branch `seo-ai-foundation`.
 <!-- Preview refresh: refined author cards and approved bios -->
 
 <!-- Preview refresh: compact circular portraits, 17% of text block -->
+
+<!-- Preview refresh: approved team positioning and unified logo sizing -->
