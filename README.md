@@ -18,3 +18,6 @@ Preview rebuild trigger: router base-path fix.
 Preview rebuild trigger: hash router correction.
 
 Preview source: SEO branch `seo-ai-foundation`.
+
+
+<!-- Preview refresh: unified InCORE branding and page layout -->
