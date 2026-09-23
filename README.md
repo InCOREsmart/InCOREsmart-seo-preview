@@ -29,3 +29,6 @@ Preview source: SEO branch `seo-ai-foundation`.
 <!-- Preview refresh: compact circular portraits, 17% of text block -->
 
 <!-- Preview refresh: approved team positioning and unified logo sizing -->
+
+
+<!-- Preview refresh: unified InCORE logo dimensions 150x48 -->
