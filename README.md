@@ -11,3 +11,6 @@ Rebuild preview from reverted SEO branch state.
 
 
 Preview rebuild: restore homepage visual system for SEO pages.
+
+
+Preview rebuild: match site background to calculator.
