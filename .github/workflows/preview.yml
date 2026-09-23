@@ -37,6 +37,9 @@ jobs:
 
       - name: Build for repository preview
         working-directory: source
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
         run: |
           npx tsc
           npx vite build --base=/InCOREsmart-seo-preview/
