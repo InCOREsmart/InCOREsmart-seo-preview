@@ -7,3 +7,6 @@
 Preview rebuild: 2026-09-23T11:19:39.053Z
 
 Preview rebuild: navigation/base-path verification 2026-09-23
+
+
+Preview rebuild trigger: navigation validation.
