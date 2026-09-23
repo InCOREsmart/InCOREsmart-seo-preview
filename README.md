@@ -32,3 +32,5 @@ Preview source: SEO branch `seo-ai-foundation`.
 
 
 <!-- Preview refresh: unified InCORE logo dimensions 150x48 -->
+
+Preview rebuild trigger: normalized shared InCORE header across all SEO pages.
