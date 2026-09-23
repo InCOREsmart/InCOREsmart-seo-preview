@@ -275,3 +275,26 @@ body>header:not(.top)>p{margin:0!important}
   }
 }
 }
+.site-footer{
+  width:100%;
+  margin-top:48px;
+  padding:28px max(24px,calc((100vw - 1180px)/2));
+  border-top:1px solid var(--incore-line);
+  background:#fff;
+}
+.site-footer-inner{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  align-items:center;
+  font-size:14px;
+}
+.site-footer a{
+  color:#475467;
+  text-decoration:none;
+}
+.site-footer a:hover{color:var(--incore-blue)}
+@media (max-width:700px){
+  .site-footer{padding:24px 20px}
+  .site-footer-inner{gap:10px 18px}
+}
