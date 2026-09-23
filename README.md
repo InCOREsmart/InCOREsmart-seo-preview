@@ -12,3 +12,5 @@ Preview rebuild: navigation/base-path verification 2026-09-23
 Preview rebuild trigger: navigation validation.
 
 Preview rebuild trigger: corrected asset base path.
+
+Preview rebuild trigger: router base-path fix.
