@@ -45,6 +45,19 @@ jobs:
           npx vite build --base=/InCOREsmart-seo-preview/
           node scripts/copy-spa-routes.mjs
 
+          # The production app currently uses "/" for the authenticated payment module.
+          # In the isolated preview, keep that app available under /app/ and use "/" as the
+          # public SEO entry point. Production repository is never modified by this step.
+          mkdir -p dist/app
+          cp dist/index.html dist/app/index.html
+          cp "$GITHUB_WORKSPACE/preview-home.html" dist/index.html
+
+          # Keep internal links inside the preview repository instead of sending the visitor
+          # back to the production root.
+          find dist/about dist/business dist/specialists dist/methodology dist/blog dist/tools -name index.html -print0 | \
+            xargs -0 sed -i 's#href="/#href="/InCOREsmart-seo-preview/#g'
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+
       - name: Publish to gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
