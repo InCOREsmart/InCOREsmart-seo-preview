@@ -40,3 +40,5 @@ Preview rebuild trigger: exact shared 150px InCORE logo width on homepage.
 
 
 Preview rebuild trigger: shared footer added to all SEO pages.
+
+Last preview refresh: homepage layout normalization
