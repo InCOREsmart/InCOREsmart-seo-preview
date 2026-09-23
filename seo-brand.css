@@ -47,13 +47,12 @@ body>header a[href="/"] img{
   display:block!important;
   object-fit:contain!important;
 }
-body>header a[href="/"] img{display:none!important}
 body>header.top .nav{
   margin-left:auto;
   display:flex;
   align-items:center;
   gap:24px;
-  font-size:14px!important;
+  font-size:0!important;
   font-weight:650;
   color:#475467;
 }
@@ -64,10 +63,27 @@ body>header.top .nav a{
   white-space:nowrap;
 }
 main{
-  width:min(1180px,calc(100% - 40px));
-  margin:0 auto!important;
-  padding:72px 20px 88px!important;
-  background:#fff;
+  width:100%;
+  margin:0!important;
+  padding:80px 20px 88px!important;
+  background:linear-gradient(180deg,#f7f8ff 0,#ffffff 430px)!important;
+}
+main>*{
+  max-width:1152px;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+main>h1{
+  max-width:1152px;
+  padding-top:0;
+}
+main>.answer{
+  max-width:960px;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+main>.team{
+  max-width:1152px;
 }
 h1{
   max-width:950px;
