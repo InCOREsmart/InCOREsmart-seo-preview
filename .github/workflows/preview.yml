@@ -35,9 +35,12 @@ jobs:
         working-directory: source
         run: npm install
 
-      - name: Build
+      - name: Build for repository preview
         working-directory: source
-        run: npm run build -- --base=/InCOREsmart-seo-preview/
+        run: |
+          npx tsc
+          npx vite build --base=/InCOREsmart-seo-preview/
+          node scripts/copy-spa-routes.mjs
 
       - name: Publish to gh-pages
         env:
@@ -62,7 +65,3 @@ jobs:
           git add -A
           git commit -m "Preview ${GITHUB_SHA}" || exit 0
           git push origin HEAD:gh-pages
-
-# Rebuild preview after source branch fix
-
-# trigger rebuild
