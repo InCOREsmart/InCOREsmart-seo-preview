@@ -64,6 +64,26 @@ jobs:
             }
           }
           await walk('dist');
+
+          // Fail the preview build if a static page still contains a root-relative
+          // navigation URL. On a GitHub Pages project site that would escape the
+          // repository path and can fall through to the SPA auth route.
+          const bad = [];
+          async function validate(dir) {
+            for (const entry of await readdir(dir, { withFileTypes: true })) {
+              const file = join(dir, entry.name);
+              if (entry.isDirectory()) await validate(file);
+              else if (entry.isFile() && file.endsWith('.html')) {
+                const html = await readFile(file, 'utf8');
+                if (/(href|src|action)=\"\/(?!InCOREsmart-seo-preview\/|\/)/.test(html) || /href=\"#\//.test(html)) bad.push(file);
+              }
+            }
+          }
+          await validate('dist');
+          if (bad.length) {
+            console.error('Invalid project-site links:', bad.join('\\n'));
+            process.exit(1);
+          }
           NODE
 
           printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
