@@ -23,3 +23,5 @@ Preview source: SEO branch `seo-ai-foundation`.
 <!-- Preview refresh: unified InCORE branding and page layout -->
 
 <!-- Preview refresh: large logo applied to every SEO header -->
+
+<!-- Preview refresh: refined author cards and approved bios -->
