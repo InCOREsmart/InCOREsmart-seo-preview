@@ -8,3 +8,6 @@ Preview rebuild: homepage-matched static page layout.
 
 
 Rebuild preview from reverted SEO branch state.
+
+
+Preview rebuild: restore homepage visual system for SEO pages.
