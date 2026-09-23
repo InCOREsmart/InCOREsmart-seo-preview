@@ -14,3 +14,5 @@ Preview rebuild trigger: navigation validation.
 Preview rebuild trigger: corrected asset base path.
 
 Preview rebuild trigger: router base-path fix.
+
+Preview rebuild trigger: hash router correction.
